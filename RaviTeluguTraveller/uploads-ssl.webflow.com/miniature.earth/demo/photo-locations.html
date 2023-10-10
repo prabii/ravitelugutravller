@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from miniature.earth/demo/photo-locations.htm by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 08 Oct 2023 11:18:07 GMT -->
+<head>
+<title>Miniature Earth | Photo Locations Demo</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+<link rel="stylesheet" href="photo-locations/style.css">
+<script src="../miniature.earth.js"></script>
+
+
+<script>
+
+window.addEventListener( "earthjsload", function() {
+
+
+	myearth = new Earth( 'myearth', {
+
+		location: { lat: 20, lng: 90 },
+		light: 'none',		
+		mapLandColor : '#a5cb7b',
+		mapSeaColor : '#bbe6e9'
+		
+	} );
+	
+	
+	var photos = [
+    { location: { lat: 28.7, lng: 82.6 }, src:'https://lh3.googleusercontent.com/pw/ADCreHeVDS2CP8HbHUgUyylus0UtJyprNPL6Dw_KJiUD3r_DI37wHDkp7j_9STKrJJ_vVKH27750pqWAzWAQS_Q-0mnYWRAo6lllYXEElRkEVKml9PGovx6e7zl2p1l1u1YTOcwjXwdeYm8NTuzUlwbfgdPx3zRKRJ4UWA5jJ6qOdsRhR4WZQTst4Qk_UNI7IvTdG_AanZdWTHoquGpYLwyhsgx6ddUp1-M2tAF-Hz-v2kM6mvk4CV_wvSKaDxtyeIzHbk64Gr4ep_Qa-KBXlg2wwxjOdkBlz1rIUOXe2jNrKWW2Get-xEwDEschVREdBpVYk9NcwTmTlWnIwAWCYgO7qyJaoibissZOEP3NZ0oi2Gkdy-7bUWzJrKLlH0PN417lBgWjf8YVq8UYlv-6ZkLXIunb3zrle5ohRbs4yMCMIazzf-LBRjHarHuqQvH2YRoEqyMBARXrEyUywVd_KtQpTb17LI8paR8W_eVyvb96ddQFhdvfzdQsztFGA1w8KDWamKLvTF_dpvMd8m5sh_RUIb7hnb8yoAMgldBKmsfGDpdzMSL5Yna_KHB9WTbJamlUAX4_GtNR-mwLrXpJsSgvODLYJPFMaPGytFa2HR45TBJxDU0Zfc3wRgB9iHWwjMey8FereOZreTyWJPK4SeBPJqdxl0-vKWbIjDykNchYYM-IObOhhdz9P0FYkt-cb3t-0_rbriIWORqnrQeMaqlZUUbus5HQd0UIqIIkhloELEao2vGqUy3n8ehc1F4Ol9aL4gGFmwOe_Dp3F_vmNB4DPdrITyc6HSsKsqfJYqLhxJQJIjSDN2ChK288_HPIv2YpjAd7uSKV4aAJAsMRKVnyAEJJK_-umeVGXxrhM42N8eC4_9ZJStvpNiedDAjDzsrXU4UdMV95xHEZsNhcUDezDg=w1040-h894-s-no?authuser=0' },
+    { location: { lat: -2.9, lng: 38.4 }, src: 'https://lh3.googleusercontent.com/pw/ADCreHclVaVA1obAuYLqsRbYK6m57Sjw3JjQ62nCjpg5uglU5U4CwSm-mGuqBO-yhXaH850dGrMHcu7hHiK82qmn0VMwY_YIcvlaEKMf8QxRp5xd7OCfm6rP9zTUoHW2VMxnFXnkrZ_GpTLYIR0KUEeBfh4jVL8tQBOnGWpH2efSr6IB671IokYW4wYOZWzv8Or4C_haBPmhSqLP1ksy1qHavxvgKz1fxtKindBmoF7FFMmPCpntOrDlKU5lDFTpzw0EqqQsn2m38jG2IkJo3KSBGqkXCPtI0E4XeihN9EdSZuzycNwNYUwyhW7sBwXdLfMMqeu6kZ3mKMn4KHWWHvUHIgUvtIG47nzdF22GJj7EgVpFOOKfYNOga5RssYyvhTHCcau10PwBbw7SheJE_I79F5GcMnKsqM0hMwtrsSbSEXfpxYQ8bq6WSPQX4xfEqflm4Oq1zNTF0X_lH0PXEpYFcR5BONODWflZ0vxRLqcrJ1mv_KS7e0r9ySfFL-v2u-zcu7LbmUc61CQAbu6Jm_x-diDqsPpKrLdUe-CMCW1JOhUPcNDtlP06kaFMFXjX9JdsxJ9KK5e9jGEv2KvStLNfDN_-8I8SdaR7NsNN9fodPBVo9-LH6FPdTSOs4dYNnXTS6qbYbq6dd_5D6Xb7-GCsskFBxyTlSTq0fDChZnOkh83K5epB6N-67MuS0wRcrXK5SsQ6pCLXVBLq204XeLup7wrLVC2S-27-NSA0VRt59Pe7sWyb1Bp27wWVO-ySPbAVJn5ZqvR8kjd0yza-lAs9iUrD-D5ggn_CAnGHzics98Hb45-u8GCZC2aoTDMYNWJsfyXuxBjBCXIzhpogKO96a1FRwLfxWAty2nNOfAqfZLj_epp7GHqidOi3u0snVUktst9ig0xvLOr1SWl1x5PMvQ=w640-h794-s-no?authuser=0' },
+    { location: { lat: 64.0, lng: -19.7 }, src: 'https://lh3.googleusercontent.com/pw/ADCreHeVbX00k-iCtw6feiM-0psOiQaofo46VhbCeNt3ntNE754RGWMpZ2NA0cU6WTp6Jy6ic-85m7ssmqfMMeNfjK28Vc5CqjmOd9sQ14f6Bs011n5-2dHfRaJ1yewj-7HbSHES7uPy8MJLmqMgRZGg6nBqGu33FO6XmFk76Klksr8LrqRG4_rVX3UDnlNVrE6e-q0AymBDlwVDdaK44dUszxWvRfrWrIEXIQ8gJYuhbX93oIGKPDpU6nnEQpQsGPjudVsDu4bSCdytDQKflCHpqRUvpMlmf-8BZhz4i2Iyvvrud3SCfgdsnESLFdgyiP76XGz98GMldcfOhog8J86JZNF6p3XZKyYxzYZIZY-vk80w7l3QTv1iNij-Pu-IhmXyunMrXEkg-SeG85Wy37JUrJfFs-miwZoYwOQKHIqIFcVQo5kI03n1ocvx28xA3F2IwaT_tv7e_nqLRls4mh0jh7RS4D37qMT7BA_nGfUIVsEPz0LAnAxVuizZxHgXNehAdIwApNbXKF0EBCE09lQg4vDgMIeas0KxeG5p4f1iuoYyq2y6Xt-Hd9FC9tuvqNTPdKUmBRXNHxP2k6m2jqCVfNPc4kqEmKR8qUVOGTpkN_R35lmfbXShLw9YOWjMhaw8OOa7FUZ6ZRluUv1DcV7GPaAAoatpFaO6mc8E2hJOxmM8sQ4Qw8tHruWc3dgO_3Hx7EHYd6kKHx7TT6RiGyeODgVrZabMgZ-Yl7BXMmwuYlZk9It08eMEoHn_QiQEh2rgMZyWJIakw2GEmIvCdF0VSO-Y7siZ-y_O94wUaU16_034WNHg285eLR2q3JbyAMVpJQVecXuUxPEQN61ifbWRdSymxdXgW5KU8xIBUci8K-WYHa2vpAcElrXUjp1X1OVmPMubo_abqGc91OjOJa3XDA=w640-h800-s-no?authuser=0' },
+    { location: { lat: 9.5, lng: 99.9 }, src: 'https://photos.fife.usercontent.google.com/pw/ADCreHf0LPT30jhZ3A8ouV3l0jWWK3T4RNKHFJZpQ9qp-CQzxZNQ_pwEcMg_=w640-h634-s-no?authuser=0' },
+    { location: { lat: -38.6, lng: 143.7 }, src: 'https://photos.fife.usercontent.google.com/pw/ADCreHdfY6aCW_5-Rs09_bfzcnITsxlElpYXXl2SPGm3wYG_Vz5oVNnge-eF=w640-h797-s-no?authuser=0' },
+    { location: { lat: 46.7, lng: 9.8 }, src: 'https://lh3.googleusercontent.com/pw/ADCreHdPKzY6FRPYxY4H3FeO8vhRQKAXZbS8oBH28-ZCprc3LbL7flJqrv-L0rKobBxlGLd0552DC_NSWsVBUDgbTKyOILR0NkZdrYDFowrEGUQhJyzWNzIAqFbdDlPj6qmiQlfe3lrW9OSu1wtgzJq6lBWLhQixIkIn7Yh-_pZbzOj9nFnLhGzSVXoSa_r61j96Ut6AhvO1s923lM1xxszXBNh9Gx1IYSjzMg2v-VsZMlwo97EVRK-BCH5jdvGmPF4pcAr68psvatOy2Ua6PCqZvxbxpwTf21TAUMwcx7hjOWryxJgYZOFsebwLGf5R7MX6qOp4LYTRIRFg2In2Z5uARjCv3EDpHoZVDgFTnYg1EH0abpgtzhxTEBPcrlCA2gCIoLaAs5rRoqm3sHuKDzO2TWSYKxWwRp6xNq6JYybgqf9IQP_hWQWcE0UAgye6O3gKDzI4CaBp5f_iw3WsmP2J3SpFZlSrVBY-AwSzACXdfhs6fFXyge56Xx8O2MD77CylhesMicKFDxyWIv1ll3TgGFpJNOg84LG4znMrTNvuHWkWexaYSKP7hNgG5FOiL1tQTeKhlql3UbZb4oGOAZJUN7RB9EoOz58erWADL3wyml_f9-_Fj8o_Dj-3qKzVeg6EcdAiec5xD8-jc-1xW1G0xBVdXW2qC3QkfhhrRpSr1PJpLKNVfYQsIX68Wh0VJ6W0OYLmx0MHKEXMMe5vv473ww7jRFbwFhF--uB_y8n1CpP84JHeNMelxHEnPpM6D8Pignn_K5srzfiBmUchA1GZV7V6tv0WE1iprA6M7V1Q-6ojYrZmVMRpAK8xCbkc66U-paqxcIeu0VEKiQfQnVq8bdk4ZpGGH-z-OVrzup1mQFmIBr8sF-QqIVpS0Efj6eADE49CyIE7t1fXRVz4BIYueg=w640-h797-s-no?authuser=0' },
+    { location: { lat: 37.7, lng: -119.5 }, src: 'https://photos.fife.usercontent.google.com/pw/ADCreHemP5HuahIvvI1GQSMFsxlgamsREBj0ndpgIw94nje7CbA1yQbZhGN_=w1040-h894-s-no?authuser=0' },
+    { location: { lat: 19.5, lng: -155.6 }, src: 'https://lh3.googleusercontent.com/pw/ADCreHdvoRKJFr78k3UJPw-bjKwUHYbKuZYo2uikZ9gdAla9DIrfBFm8TWJdhifJkxFclQsgfMq5-s9H7HoWrT22PTNybPJYolpbF6ND0hoNEHyqGmjLZ953uVToJ6tmFxaUotcQILcI8Seh0Y6RjcVNuiI67wG4hOuDPxH2RdT4mwgHcdf4AhCxb_BnOoX7JZDx47v-gtrIU8wnhKr15JUOc4PyHknqs-E_-p8424N18wcWERMw0sQ0dn_rr6f73gUqqTluSzdoVFx3MqHehafj1QsbfalDv-bBYHkjewsVy9iJDJPnqt_7OMQYYNbHDB4yqQG0m2PQfBSk0VB8klnV0IuJr0lLmYAiiSjUWuFuSN0sXlApeiAsBZZ-L9RbzcAWmO6bmJ8A7GHnfJiPEJGPL0hMWGCxFnJcQCOGNNA7bpJdf45-uUYM2TPUNdFCe8LU9g_-GqG_lq-8Sgh2QhKNPqP5ic4g1t6M8M-k432xjQEHamu_4V78sLIU7QMNwroxkGTJXewcCG2JbsV-Qd5v8xhWs_9ySdVtkfJgkYkBTNePQor6DJTsw0UF7RdIRt0fc0r_2KB1gw9CFpPRtCedK3NWfJYubjwkjmTY7GHAiuMFz9QUOpTB8zT_taKSWGa_lCIkBVajldUIefJeUL_IEsTL7wC8VVssd18O3C5hmJ4_9WWz38zPQhx5OVwSNuPHVwrTBj2yGNV8_BE8yjPlwyJzhTqCGQZB4jblHbHsFO3DfgGF5Ddh07nZgamugyZjju-0qjcy8UoutK7_vHO3t1Qi4k-Rfe4-BlbnrXdEEAlQJdxtjHR2Ps1lExAAMPZw8ZwIQnDHMCpg-siuziWlkhYOg14zQtVXtMzn9_5j1Rj5Dn0oPklLLl6TQxXj3pau1UHuIthyugH6AW7T6uiHhw=w640-h800-s-no?authuser=0' },
+    { location: { lat: 34.6, lng: 135.4 }, src: 'https://photos.fife.usercontent.google.com/pw/ADCreHeYbACZjxFVzDLmlrmbPdOBOxmFlSIqmZJbAq3pKZSr_xpqamnkkiG1=w172-h209-no?authuser=0' },
+    { location: { lat: 24.2, lng: -77.8 }, src: 'https://lh3.googleusercontent.com/pw/ADCreHeZ9S71rEoJ0f9rhBzJ2jcGpPTQ5IhMJ3pubu81RqWqoAl1nZesHfnfV06rZtWGzGfntd7J1EVwOkim60slFvzlFT0_NQlJ9dSrvom74rbz4w0KejKZk0w9qf__4dpOf7gSmfu3vAu1ON7A71ObtRQh0zWB5BP6e4qUVdbn8d6yIEhEONhTeMkz3bmyIkkMp9-GrI3Z19rGF4xaM-QSz_72AwtLQM4ocsCmxniXKXPP-d9WCouGOilXn9uBTjDYlnLv2WQ8IJYk-KGlGlcaM8_RkD3GHQNspiwPpSdX2IpqYrPS3yDVIDuZTGuf5hu25AHwkhbGHSyXgqeOb7aMJgiMfUZVeFyqCZH0FyTCfvsIcB_zQZGqlKjIyrDH8D-DKBU_YylfcMCx1huAIFTIMJfKPDglOq9cLzfoJMthrXWLzvKeNSLNqtoHp_kcXRbPXOZ6gyEj22QOT3xOLWUn5vEBJPVbZKpSFJBFkmIurYR1MV3MPj1R2jTH6eksYIaF9PNPGdswqxoUNN21LldVVx7puoZWc0Qp3upoenB9wKto5fC02Y2O8LxfuEG4NyZ7mpyt-3AS8ifcRb0JB4BejgKgEFzoSu_YxMPLvFN0cbFgdnWWb76EXkQZI3Vag7ox-yqKYL6tA6Ft9Wj_TX2YrGuy-ndtH_8MgGxQ_RlGBo78crRL3XbopRtBDMCHtAEwzUF65aA5rEwWRPEe17x49U09pIGh-XyI07TlOG-740bA7czWBvBcj4_EP-oPKzTozweXzZiihFxfP1krGn-sdjRz9fmAJljH2wXBEN9gEUg7O41uucMw_GFgQm2m56Q6KElqrjwdTuAnqwCBmwP-W9-KTw79hFyskIbTQC2IfE6xQ3ev14ua50Y36V-k51Zw3nUyh05fuCWWV2cpiBOERA=w640-h724-s-no?authuser=0' },
+    { location: { lat: -13.1, lng: -72.5 }, src: 'https://lh3.googleusercontent.com/pw/ADCreHeCthhb2Z2DD8q6bf8rIzd8pWQRs9OIoArDuOY4ouk_5WkM8UsCHA2lwxHagkrg-HFtpXHD90cHPiqYjWjPHIOHXSliBUToGSPFp71OtiLynpLuK_K8zN8vCjmYXy-MDVT1HhjSwAt_hh8xDjg4gXpj1fZPjd98eTlS4dwsRLe0CMunGX1GiOWrF0Qv49THbpMmWamPjkcWOw_2l40WTGeFAiXJgkRuzkmQFoI24IJl1OdIulyELwweWyiFkTqMxaEx0H0aLTtbqy6t2kUiidaZ7Y9QHqYVYFCnoCUhfzMUiiGRUFau357ylNV_djcP8g0_RnTIxqKjuKTO8I48sCh1wX9JIwNtVtEXEyj0zMFKS5dK4mnaDLTqmKm4Q92_oD_3a3RTfURqzfer80ZxrXYnkXcXUjsOmUWpuqGUzVvly_9mZeIKtkBYHdWAzKv7dfZ-8ilkXmrTjBbpo-9mc37JVPN4Z48cpdY-g3IW65Rc1wrZWHfCjX2zdDAl2ean8kQfxbZ5_WeIHwf7BEu3QsfQA0EBKXqp2B50tVhc20HKK_7q_IH6cNFtO3cujij-sUJw8aFZWFpNa_bp1JpPNxjkKxCbIsGWbtDaoX1nAdGNdxnoEHPsVGJMNMwRn582N4xPPtdfOhkykV1o2lvrvC2a9rwWAD4QmgrXM0C-SpBUZNO1ywQscLdwD_U5BbEWqj_p8Ihp_0P6XRL4Yk7TIRg8p9IGvD1KgGUdCrK_4TuSnmhFZ0-9hXVa5O1vh2VOB3lpxHZ0Tg5mOUM_ooTQBta654I1j0w60kKZzF02nS4P8qAIP7zcp9nKbSsQAqG09LRL84-O8AJLpw9zY4DawyCEJGP9uSStpMPr47Y2nAaBBrT8sVRaNBpRO2oBTwn6r8CD50umAiMzhgzLpHLexQ=w640-h791-s-no?authuser=0'},
+];
+
+	
+	
+	myearth.addEventListener( "ready", function() {
+	
+		// add photo overlay
+		
+		photo_overlay = this.addOverlay( {
+			content: '<div id="photo"><div id="close-photo" onclick="closePhoto(); event.stopPropagation();"></div></div>',
+			visible: false,
+			containerScale: 1,
+			depthScale: 0.5
+		} );	
+	
+
+		// add photo pins
+		
+		for ( var i=0; i < photos.length; i++ ) {
+		
+			var marker = this.addMarker( {
+			
+				mesh : "Marker",
+				color: (i % 2 == 0) ? '#3a6a39' : '#6a5739',
+				location : photos[i].location,
+				scale: 0.01,
+				offset: 1.6,
+				visible: false,
+				transparent: true,
+				hotspot: true,
+				hotspotRadius : 0.75,
+				hotspotHeight : 1.3,						
+				
+				// custom property
+				photo_info: photos[i]
+				
+			} );
+			
+			marker.addEventListener('click', openPhoto);
+			
+			// animate marker
+			setTimeout( (function() {
+				this.visible = true;
+				this.animate( 'scale', 0.9, { duration: 140 } );
+				this.animate( 'offset', 0, { duration: 1100, easing: 'bounce' } );
+			}).bind(marker), 280 * i );
+			
+		}
+		
+
+	} );
+	
+	
+	
+	// close photo overlay when navigating away
+	
+	myearth.addEventListener( "change", function() {
+		
+		if ( ! current_marker || auto_rotate ) return;
+
+		if ( Earth.getAngle( myearth.location, current_marker.location ) > 45 ) {
+			closePhoto();
+		}
+		
+	} );
+	
+
+} );
+
+
+
+var current_marker, auto_rotate;
+
+
+function openPhoto() {
+
+	// close current photo
+	if ( current_marker ) {
+		
+		closePhoto();
+		window.setTimeout( openPhoto.bind(this), 120 );
+		
+		return;
+	}
+	
+	// rotate earth if needed
+	if ( myearth.goTo( this.location, { relativeDuration: 100, approachAngle: 12, end: function(){auto_rotate=false;} } ) ) {
+		auto_rotate = true;
+	}
+	
+	
+	document.getElementById('photo').style.backgroundImage = "url("+ this.photo_info.src +")";
+	
+	photo_overlay.location = this.location;
+	photo_overlay.visible = true;
+	
+	setTimeout( function(){
+		document.getElementById('photo').className = 'photo-appear';
+	}, 120);
+	
+	this.animate( 'scale', 0.001, { duration: 150 } );
+	current_marker = this;
+	
+}
+
+function closePhoto() {
+
+	if ( ! current_marker ) return;
+	
+	document.getElementById('photo').className = '';
+	
+	setTimeout( (function(){
+		document.getElementById('photo').style.backgroundImage = 'none';
+		photo_overlay.visible = false;
+		this.opacity = 0.7;
+		this.animate( 'scale', 1, { duration: 150 } );
+	}).bind(current_marker), 100 );
+	
+	current_marker = false;
+	
+}
+
+
+</script>
+
+</head>
+
+<body>
+
+<div id="wrapper">
+	<div id="wrapper-in">
+	
+		<div id="myearth"></div>
+		
+	</div><!--wrapper-in-->
+</div><!--wrapper-->
+
+<style>
+
+#back-link {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #0d130e;
+	padding: 0.5em;
+	font-size: 26px;
+	z-index: 10000;
+	border-right: 1px RGBA(255,255,255,0.5) solid;
+	border-bottom: 1px RGBA(255,255,255,0.5) solid;
+}
+#back-link img {
+	display: block;
+	width: 4em;
+	height: auto;
+}
+
+@media (max-width: 1199px) {
+	#back-link {
+		font-size: 20px;
+	}
+}
+@media (max-width: 511px) {
+	#back-link {
+		font-size: 16px;
+	}
+}
+
+#legal-footer-wrap {
+	position: relative;
+	height: 0;
+	z-index: 10002;
+	font-family: Arial, sans-serif;
+}
+
+#legal-footer {
+	position: absolute;
+	bottom: 0.5em;
+	right: 0.5em;
+}
+
+#legal-footer a {
+	text-decoration: none;
+	color: inherit;
+	padding: 0 0.5em;
+	font-size: 10px;
+}
+
+</style>
+
+
+
+
+</body>
+
+<!-- Mirrored from miniature.earth/demo/photo-locations.htm by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 08 Oct 2023 11:18:08 GMT -->
+</html>
