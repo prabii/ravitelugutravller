@@ -1091,7 +1091,7 @@ textarea.w-select {
     }
 }
 
-@media screen and (max-width:479px) {
+@media screen and (max-width:568px) {
     .w-container {
         max-width: none
     }
@@ -2202,7 +2202,7 @@ textarea.w-select {
     }
 }
 
-@media screen and (max-width:479px) {
+@media screen and (max-width:568px) {
     .w-nav[data-collapse="tiny"] .w-nav-menu {
         display: none
     }
@@ -2268,7 +2268,7 @@ textarea.w-select {
     display: block
 }
 
-@media screen and (max-width:479px) {
+@media screen and (max-width:568px) {
     .w-tab-link {
         display: block
     }
@@ -5410,7 +5410,7 @@ figcaption {
     }
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 568px) {
     h1 {
         font-size: 36px;
         line-height: 52px;
